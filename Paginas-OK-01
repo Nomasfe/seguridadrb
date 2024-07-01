@@ -399,81 +399,56 @@ add address="accounts.claveunica.gob.cl" list="Pagina-OK" comment="Pagina-OK"
 add address="claveunica.gob.cl" list="Pagina-OK" comment="Pagina-OK"
 # Licitaciones: DTPM: licitaciones.dtpm.cl
 add address="licitaciones.dtpm.cl" list="Pagina-OK" comment="Pagina-OK"
-
+# PAginas del Router
 # Mutual: mutual.cl
 add address="mutual.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Ministerio de Salud: www.minsal.cl
 add address="www.minsal.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# Seremi de Salud - Agenda Centro Sangre Concepción: seremi13.redsalud.gob.cl
+# Seremi de Salud - Agenda Centro Sangre Concepcion: seremi13.redsalud.gob.cl
 add address="seremi13.redsalud.gob.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# Dirección del Trabajo: midt.dirtrab.cl
+# Direccion del Trabajo: midt.dirtrab.cl
 add address="midt.dirtrab.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# VRWEB - Diseño y Desarrollo Web: www.vrweb.cl
+# VRWEB - Diseno y Desarrollo Web: www.vrweb.cl
 add address="www.vrweb.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# VRWEB - Diseño y Desarrollo Web: emma.cl
+# VRWEB - Diseno y Desarrollo Web: emma.cl
 add address="emma.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Central 132: central132.cl
 add address="central132.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# Directorio de Transporte Público: www.dtpm.cl
+# Directorio de Transporte Publico: www.dtpm.cl
 add address="www.dtpm.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Woken: woken.cl
 add address="woken.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Woken: clientes.woken.app
 add address="clientes.woken.app" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: gmail.com
 add address="gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: mail.gmail.com
 add address="mail.gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: www.gmail.com
 add address="www.gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: mail.google.com
 add address="mail.google.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: smtp.gmail.com
 add address="smtp.gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: pop.gmail.com
 add address="pop.gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Mail Google: imap.gmail.com
 add address="imap.gmail.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Tracktec: suite.tracktec.cl
 add address="suite.tracktec.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Tracktec: tracktec-suite.auth0.com
 add address="tracktec-suite.auth0.com" list="Pagina-OK" comment="Pagina-OK"
-
 # Tracktec: tracktec.cl
 add address="tracktec.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Sonda Sinoptico: snptc.tstgo.cl
 add address="snptc.tstgo.cl" list="Pagina-OK" comment="Pagina-OK"
-
 # Sonda Sinoptico: 198.41.44.127
 add address="198.41.44.127" list="Pagina-OK" comment="Pagina-OK"
-
 # Sonda Sinoptico: 200.71.222.43
 add address="200.71.222.43" list="Pagina-OK" comment="Pagina-OK"
-
-# Unidad Operativa de Control de Tránsito: 200.75.19.170-200.75.19.175
+# Unidad Operativa de Control de Transito: 200.75.19.170-200.75.19.175
 add address="200.75.19.170-200.75.19.175" list="Pagina-OK" comment="Pagina-OK"
-
-# Unidad Operativa de Control de Tránsito: apps.mtt.cl
+# Unidad Operativa de Control de Transito: apps.mtt.cl
 add address="apps.mtt.cl" list="Pagina-OK" comment="Pagina-OK"
-
-# Unidad Operativa de Control de Tránsito: mtt.gob.cl
+# Unidad Operativa de Control de Transito: mtt.gob.cl
 add address="mtt.gob.cl" list="Pagina-OK" comment="Pagina-OK"
