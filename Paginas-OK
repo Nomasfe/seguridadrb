@@ -1,88 +1,454 @@
-# Remove all old entries first
+# Primero elimine todas las entradas antiguas
 :foreach i in=[/ip firewall address-list find ] do={
-  :if ( [/ip firewall address-list get $i comment] = "Paginas-OK") do={
+  :if ( [/ip firewall address-list get $i comment] = "Pagina-OK") do={
       /ip firewall address-list remove $i
   }
 }
 
-# Now let's add the new ones
+add address="" list="Pagina-OK" comment="Pagina-OK"
 /ip firewall address-list
-# Paginas de Bancos de Chile
-add address="banco.bice.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.bci.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.scotiabankchile.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.bancoripley.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="portales.bancochile.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.bancoconsorcio.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.bancofalabella.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.internacional.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="banco.santander.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="personas.bancosecurity.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="empresas.bancosecurity.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.bancoestado.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="ww2.itau.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.btgpactual.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.about.hsbc.cl" list="Paginas-OK" comment="Paginas-OK"
-# Paginas de AFP
-add address="www6.cuprum.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.afphabitat.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.planvital.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.provida.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="www.afpcapital.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="nueva.afpmodelo.cl" list="Paginas-OK" comment="Paginas-OK"
-add address="uno.cl" list="Paginas-OK" comment="Paginas-OK"
-
-www.spensiones.cl
-www.previred.com
-www.afc.cl
-www.registrocivil.cl
-www.ips.gob.cl
-www.df.cl
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-add address="licitaciones.dtpm.cl" list="Paginas-OK" comment="Paginas-OK"
-recursos.vule.cl
-apps.mtt.cl
-www.fonasa.cl
-www.somosesencial.cl
-www.vidatres.cl
-www.nuevamasvida.cl
-www.cruzblanca.cl
-www.consalud.cl
-www.colmena.cl
-www.banmedica.cl
-www.geovictoria.com
-www.previred.com
-accounts.claveunica.gob.cl
-zeusr.sii.cl
-homer.sii.cl
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Bancos:
+# Banco de Chile: www.bancochile.cl
+add address="www.bancochile.cl" list="Pagina-OK" comment="Pagina-OK"
+# BancoEstado: www.bancoestado.cl
+add address="www.bancoestado.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco Santander: www.santander.cl
+add address="www.santander.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco BCI: www.bci.cl
+add address="www.bci.cl" list="Pagina-OK" comment="Pagina-OK"
+# Scotiabank Chile: www.scotiabankchile.cl
+add address="www.scotiabankchile.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco Itau: www.itau.cl
+add address="www.itau.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco Falabella: www.bancofalabella.cl
+add address="www.bancofalabella.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco Ripley: www.bancoripley.cl
+add address="www.bancoripley.cl" list="Pagina-OK" comment="Pagina-OK"
+# Banco Consorcio: www.bancoconsorcio.cl
+add address="www.bancoconsorcio.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP (Administradoras de Fondos de Pensiones):
+# AFP Habitat: www.afphabitat.cl
+add address="www.afphabitat.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP Provida: www.afpprovida.cl
+add address="www.afpprovida.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP Capital: www.afpcapital.cl
+add address="www.afpcapital.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP Cuprum: www.afpcuprum.cl
+add address="www.afpcuprum.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP Modelo: www.afpmodelo.cl
+add address="www.afpmodelo.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP PlanVital: www.afpplanvital.cl
+add address="www.afpplanvital.cl" list="Pagina-OK" comment="Pagina-OK"
+# AFP UNO: www.afpuno.cl
+add address="www.afpuno.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapres (Instituciones de Salud Previsional):
+# Isapre Banmedica: www.banmedica.cl
+add address="www.banmedica.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapre Colmena: www.colmena.cl
+add address="www.colmena.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapre Consalud: www.consalud.cl
+add address="www.consalud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapre Cruz Blanca: www.cruzblanca.cl
+add address="www.cruzblanca.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapre Nueva Masvida: www.nuevamasvida.cl
+add address="www.nuevamasvida.cl" list="Pagina-OK" comment="Pagina-OK"
+# Isapre Vida Tres: www.vidatres.cl
+add address="www.vidatres.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cajas de Compensacion Chilenas:
+# Caja Los Andes: www.cajalosandes.cl
+add address="www.cajalosandes.cl" list="Pagina-OK" comment="Pagina-OK"
+# Caja de Compensacion La Araucana: www.laaraucana.cl
+add address="www.laaraucana.cl" list="Pagina-OK" comment="Pagina-OK"
+# Caja de Compensacion Los Heroes: www.cajalosheroes.cl
+add address="www.cajalosheroes.cl" list="Pagina-OK" comment="Pagina-OK"
+# Caja de Compensacion 18 de Septiembre: www.caja18.cl
+add address="www.caja18.cl" list="Pagina-OK" comment="Pagina-OK"
+# Caja de Compensacion Gabriela Mistral: www.cajamistral.cl
+add address="www.cajamistral.cl" list="Pagina-OK" comment="Pagina-OK"
+# Pagos y Comercio Electronico:
+# WebPay: www.webpay.cl
+add address="www.webpay.cl" list="Pagina-OK" comment="Pagina-OK"
+# Mercado Pago: www.mercadopago.cl
+add address="www.mercadopago.cl" list="Pagina-OK" comment="Pagina-OK"
+# PayPal: www.paypal.com/cl
+add address="www.paypal.com" list="Pagina-OK" comment="Pagina-OK"
+add address="www.paypal.cl" list="Pagina-OK" comment="Pagina-OK"
+# Previred: www.previred.com
+add address="www.previred.com" list="Pagina-OK" comment="Pagina-OK"
+# Jumpseller: jumpseller.cl
+add address="jumpseller.cl" list="Pagina-OK" comment="Pagina-OK"
+# Transbank: publico.transbank.cl
+add address="publico.transbank.cl" list="Pagina-OK" comment="Pagina-OK"
+# Servipag: portal.servipag.com
+add address="portal.servipag.com" list="Pagina-OK" comment="Pagina-OK"
+# Sencillito: www.sencillito.com
+add address="www.sencillito.com" list="Pagina-OK" comment="Pagina-OK"
+# Mach: www.somosmach.com
+add address="www.somosmach.com" list="Pagina-OK" comment="Pagina-OK"
+# Tenpo: www.tenpo.cl
+add address="www.tenpo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Retail:
+# Falabella: www.falabella.com
+add address="www.falabella.com" list="Pagina-OK" comment="Pagina-OK"
+# Ripley: simple.ripley.cl
+add address="simple.ripley.cl" list="Pagina-OK" comment="Pagina-OK"
+# Paris: www.paris.cl
+add address="www.paris.cl" list="Pagina-OK" comment="Pagina-OK"
+# La Polar: www.lapolar.cl
+add address="www.lapolar.cl" list="Pagina-OK" comment="Pagina-OK"
+# Hites: www.hites.com
+add address="www.hites.com" list="Pagina-OK" comment="Pagina-OK"
+# Jumbo: www.jumbo.cl
+add address="www.jumbo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Lider: www.lider.cl
+add address="www.lider.cl" list="Pagina-OK" comment="Pagina-OK"
+# Santa Isabel: www.santaisabel.cl
+add address="www.santaisabel.cl" list="Pagina-OK" comment="Pagina-OK"
+# Ok Market: okmarket.cl
+add address="okmarket.cl" list="Pagina-OK" comment="Pagina-OK"
+# Alvi: www.alvi.cl
+add address="www.alvi.cl" list="Pagina-OK" comment="Pagina-OK"
+# Tottus: tottus.falabella.com
+add address="tottus.falabella.com" list="Pagina-OK" comment="Pagina-OK"
+# Unimarc: www.unimarc.cl
+add address="www.unimarc.cl" list="Pagina-OK" comment="Pagina-OK"
+# Sodimac: sodimac.falabella.com
+add address="sodimac.falabella.com" list="Pagina-OK" comment="Pagina-OK"
+# Easy: www.easy.cl
+add address="www.easy.cl" list="Pagina-OK" comment="v"
+# Abcdin: www.abcdin.cl
+add address="www.abcdin.cl" list="Pagina-OK" comment="Pagina-OK"
+# Corona: www.corona.cl
+add address="www.corona.cl" list="Pagina-OK" comment="Pagina-OK"
+# Tricot: www.tricot.cl
+add address="www.tricot.cl" list="Pagina-OK" comment="Pagina-OK"
+# Sparta: sparta.cl
+add address="sparta.cl" list="Pagina-OK" comment="Pagina-OK"
+# Casa Ideas: www.casaideas.cl
+add address="www.casaideas.cl" list="Pagina-OK" comment="Pagina-OK"
+# Walmart Chile: www.somoswalmartchile.cl
+add address="www.somoswalmartchile.cl" list="Pagina-OK" comment="Pagina-OK"
+# Mercado Libre: www.mercadolibre.cl
+add address="www.mercadolibre.cl" list="Pagina-OK" comment="Pagina-OK"
+# Gobierno y Administracion Publica:
+# Gobierno de Chile: www.gob.cl
+add address="www.gob.cl" list="Gob-Chile" comment="Pagina-OK"
+# Ministerio del Interior y Seguridad Publica: www.interior.gob.cl
+add address="www.interior.gob.cl" list="Interior" comment="Pagina-OK"
+# Ministerio de Hacienda: www.hacienda.cl
+add address="www.hacienda.cl" list="Hacienda" comment="Pagina-OK"
+# Ministerio de Salud: www.minsal.cl 
+add address="www.minsal.cl" list="Minsalud" comment="Pagina-OK"
+# Ministerio de Educacion: www.mineduc.cl
+add address="www.mineduc.cl" list="Mineduc" comment="Pagina-OK"
+# Ministerio de Economia, Fomento y Turismo: www.economia.cl 
+add address="www.economia.cl" list="Economia" comment="Pagina-OK"
+# Ministerio de Justicia y Derechos Humanos: www.minjusticia.gob.cl 
+add address="www.minjusticia.gob.cl" list="Minjusticia" comment="Pagina-OK"
+# Ministerio de Desarrollo Social y Familia: www.desarrollosocialyfamilia.gob.cl 
+add address="www.desarrollosocialyfamilia.gob.cl" list="Desarrollosocial" comment="Pagina-OK"
+# Ministerio de Vivienda y Urbanismo: www.minvu.cl
+add address="www.minvu.cl" list="Minvu" comment="Pagina-OK"
+# Ministerio de Obras Publicas: www.mop.cl
+add address="www.mop.cl" list="Mop" comment="Pagina-OK"
+# Ministerio de Transportes y Telecomunicaciones: www.mtt.gob.cl 
+add address="www.mtt.gob.cl" list="Mtt" comment="Pagina-OK"
+# Ministerio de Agricultura: www.minagri.gob.cl 
+add address="www.minagri.gob.cl" list="Minagri" comment="Pagina-OK"
+# Ministerio del Trabajo y Prevision Social: www.mintrab.gob.cl
+add address="www.mintrab.gob.cl" list="Mintrab" comment="Pagina-OK"
+# Ministerio de Defensa Nacional: www.defensa.cl 
+add address="www.defensa.cl" list="Defensa" comment="Pagina-OK"
+# Ministerio de Energia: www.energia.gob.cl 
+add address="www.energia.gob.cl" list="Energia" comment="Pagina-OK"
+# Ministerio del Medio Ambiente: www.mma.gob.cl
+add address="www.mma.gob.cl" list="MMA" comment="Pagina-OK"
+# Entidades Fiscales y Reguladoras
+# SII (Servicio de Impuestos Internos): www.sii.cl
+add address="www.sii.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Recursos: zeusr.sii.cl
+add address="zeusr.sii.cl" list="Pagina-OK" comment="Pagina-OK"
+# Recursos: homer.sii.cl
+add address="homer.sii.cl" list="Pagina-OK" comment="Pagina-OK"
+# Superintendencia de Salud: www.supersalud.gob.cl
+add address="www.supersalud.gob.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Superintendencia de Bancos e Instituciones Financieras: www.sbif.cl
+add address="www.sbif.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Superintendencia de Pensiones: www.spensiones.cl
+add address="www.spensiones.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Contraloria General de la Republica: www.contraloria.cl
+add address="www.contraloria.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Servicio Nacional del Consumidor (SERNAC): www.sernac.cl
+add address="www.sernac.cl" list="Entidades-Fiscales" comment="Pagina-OK"
+# Seguridad Social y Pensiones:
+# IPS (Instituto de Prevision Social): www.ips.gob.cl
+add address="www.ips.gob.cl" list="Seguridad-Social" comment="Pagina-OK"
+# Superintendencia de Pensiones: www.spensiones.cl
+add address="www.spensiones.cl" list="Seguridad-Social" comment="Pagina-OK"
+# AFC (Administradora de Fondos de Cesantia): www.afc.cl
+add address="www.afc.cl" list="Seguridad-Social" comment="Pagina-OK"
+# Registro Civil e Identificacion:
+# Registro Civil (Servicio de Registro Civil e Identificacion): www.registrocivil.cl
+add address="www.registrocivil.cl" list="Registro-Civil" comment="Pagina-OK"
+# ChileAtiende (Red de Atencion a Ciudadanos): www.chileatiende.gob.cl
+add address="www.chileatiende.gob.cl" list="Servicios-Publicos" comment="Pagina-OK"
+# Educacion y Ciencia: 
+# CONICYT (Comision Nacional de Investigacion Cientifica y Tecnologica): www.conicyt.cl
+add address="www.conicyt.cl" list="Pagina-OK" comment="Pagina-OK"
+# JUNAEB (Junta Nacional de Auxilio Escolar y Becas): www.junaeb.cl
+add address="www.junaeb.cl" list="Pagina-OK" comment="Pagina-OK"
+# Seguridad y Justicia:
+# Policia de Investigaciones de Chile (PDI): www.pdichile.cl
+add address="www.pdichile.cl" list="Pagina-OK" comment="Pagina-OK"
+# Carabineros de Chile: www.carabineros.cl
+add address="www.carabineros.cl" list="Pagina-OK" comment="Pagina-OK"
+# Gendarmeria de Chile: www.gendarmeria.gob.cl
+add address="www.gendarmeria.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+# Transporte y Obras Publicas: 
+# Direccion de Vialidad: www.vialidad.cl
+add address="www.vialidad.cl" list="Pagina-OK" comment="Pagina-OK"
+# Transporte y Obras Publicas: Direccion General de Aeronautica Civil: www.dgac.gob.cl
+add address="www.dgac.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+# Transporte y Obras Publicas: Metro de Santiago: www.metro.cl
+add address="www.metro.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: 
+# Canal Digital PJUD: conecta.pjud.cl
+add address="conecta.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Formulario: buzon.pjud.cl
+add address="buzon.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Arica: www.pjud.cl
+add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Iquique: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Antofagasta: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Copiapo: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de La Serena: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Valparaiso: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Rancagua: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Talca: www.cortetalca.cl
+add address="www.cortetalca.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Chillan: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Concepcion: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Temuco: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Valdivia: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Puerto Montt: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Coyhaique: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cortes de Apelaciones: Corte de Apelaciones de Punta Arenas: www.pjud.cl
+#add address="www.pjud.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: 
+#Municipalidad de Santiago: www.munistgo.cl
+add address="www.munistgo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Providencia: www.providencia.cl
+add address="www.providencia.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Las Condes: www.lascondes.cl
+add address="www.lascondes.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Vitacura: www.vitacura.cl
+add address="www.vitacura.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de La Florida: www.laflorida.cl
+add address="www.laflorida.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Puente Alto: www.mpuentealto.cl
+add address="www.mpuentealto.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Maipu: www.maipu.cl
+add address="www.maipu.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de nunoa: www.nunoa.cl
+add address="www.nunoa.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de La Reina: www.lareina.cl
+add address="www.lareina.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Penalolen: www.penalolen.cl
+add address="www.penalolen.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Pudahuel: www.pudahuel.cl
+add address="www.pudahuel.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Quilicura: www.quilicura.cl
+add address="www.quilicura.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Recoleta: www.recoleta.cl
+add address="www.recoleta.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Independencia: www.independencia.cl
+add address="www.independencia.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Conchali: www.conchali.cl
+add address="www.conchali.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Renca: www.renca.cl
+add address="www.renca.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de San Miguel: www.sanmiguel.cl
+add address="www.sanmiguel.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de La Cisterna: www.lacisterna.cl
+add address="www.lacisterna.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Lo Espejo: www.loespejo.cl
+add address="www.loespejo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Estacion Central: www.estacioncentral.cl
+add address="www.estacioncentral.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de San Joaquin: www.sanjoaquin.cl
+add address="www.sanjoaquin.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de La Pintana: www.lapintana.cl
+add address="www.lapintana.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de San Ramon: www.sanramon.cl
+add address="www.sanramon.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Pedro Aguirre Cerda: www.pedroaguirrecerda.cl
+add address="www.pedroaguirrecerda.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de El Bosque: www.municipalidadelbosque.cl
+add address="www.municipalidadelbosque.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Lo Barnechea: www.lobarnechea.cl
+add address="www.lobarnechea.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Huechuraba: www.huechuraba.cl
+add address="www.huechuraba.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Cerrillos: www.cerrillos.cl
+add address="www.cerrillos.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Macul: www.macul.cl
+add address="www.macul.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de San Bernardo: www.sanbernardo.cl
+add address="www.sanbernardo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Melipilla: www.melipilla.cl
+add address="www.melipilla.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Talagante: www.talagante.cl
+add address="www.talagante.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Buin: www.buin.cl
+add address="www.buin.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Paine: www.paine.cl
+add address="www.paine.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Colina: www.colina.cl
+add address="www.colina.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Lampa: www.lampa.cl
+add address="www.lampa.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Quilpue: www.quilpue.cl
+add address="www.quilpue.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Villa Alemana: www.villalemana.cl
+add address="www.villalemana.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Vina del Mar: www.vinadelmar.cl
+add address="www.vinadelmar.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Valparaiso: www.valpo.gob.cl
+add address="www.valpo.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Rancagua: www.rancagua.cl
+add address="www.rancagua.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Talca: www.talca.cl
+add address="www.talca.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Chillan: www.chillan.cl
+add address="www.chillan.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Concepcion: www.concepcion.cl
+add address="www.concepcion.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Temuco: www.temuco.cl
+add address="www.temuco.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Valdivia: www.munivaldivia.cl
+add address="www.munivaldivia.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Puerto Montt: www.puertomontt.cl
+add address="www.puertomontt.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Coyhaique: www.coyhaique.cl
+add address="www.coyhaique.cl" list="Pagina-OK" comment="Pagina-OK"
+# Municipalidades de Chile: Municipalidad de Punta Arenas: www.puntaarenas.cl
+add address="www.puntaarenas.cl" list="Pagina-OK" comment="Pagina-OK"
+# Telecomunicaciones y Servicios Basicos: 
+# Movistar: www.movistar.cl
+add address="www.movistar.cl" list="Pagina-OK" comment="Pagina-OK"
+# VTR: www.vtr.com
+add address="www.vtr.com" list="Pagina-OK" comment="Pagina-OK"
+# Entel: www.entel.cl
+add address="www.entel.cl" list="Pagina-OK" comment="Pagina-OK"
+# Claro Chile: www.clarochile.cl
+add address="www.clarochile.cl" list="Pagina-OK" comment="Pagina-OK"
+# WOM: www.wom.cl
+add address="www.wom.cl" list="Pagina-OK" comment="Pagina-OK"
+# Enel Distribucion: www.enel.cl
+add address="www.enel.cl" list="Pagina-OK" comment="Pagina-OK"
+# CGE: www.cge.cl
+add address="www.cge.cl" list="Pagina-OK" comment="Pagina-OK"
+#  Aguas Andinas: www.aguasandinas.cl
+add address="www.aguasandinas.cl" list="Pagina-OK" comment="Pagina-OK"
+# Esval: www.esval.cl
+add address="www.esval.cl" list="Pagina-OK" comment="Pagina-OK"
+# Farmacias en Chile:
+# Farmacias Ahumada: www.farmaciasahumada.cl
+add address="www.farmaciasahumada.cl" list="Pagina-OK" comment="Pagina-OK"
+# Cruz Verde: www.cruzverde.cl
+add address="www.cruzverde.cl" list="Pagina-OK" comment="Pagina-OK"
+# Salcobrand: www.salcobrand.cl
+add address="www.salcobrand.cl" list="Pagina-OK" comment="Pagina-OK"
+# Farmex: www.farmex.cl
+add address="www.farmex.cl" list="Pagina-OK" comment="Pagina-OK"
+# Farmacias Knop: www.farmaciasknop.cl
+add address="www.farmaciasknop.cl" list="Pagina-OK" comment="Pagina-OK"
+# Farmacias Similares: www.farmaciassimilares.cl
+add address="www.farmaciassimilares.cl" list="Pagina-OK" comment="Pagina-OK"
+# RedFarma: www.redfarma.cl
+add address="www.redfarma.cl" list="Pagina-OK" comment="Pagina-OK"
+# Farmacias Ahumada Online: ahumada.cl
+add address="ahumada.cl" list="Pagina-OK" comment="Pagina-OK"
+# Doctor Simi: www.drsimi.cl
+add address="www.drsimi.cl" list="Pagina-OK" comment="Pagina-OK"
+# Medios de Comunicacion: 
+# Diario Financiero (DF): www.df.cl
+add address="www.df.cl" list="Pagina-OK" comment="Pagina-OK"
+# MINISTERIO DE TRANSPORTES Y TELECOMUNICACIONES: apps.mtt.cl
+add address="apps.mtt.cl" list="Pagina-OK" comment="Pagina-OK"
+# Fonasa: www.fonasa.cl
+add address="www.fonasa.cl" list="Pagina-OK" comment="Pagina-OK"
+# Esencial: www.somosesencial.cl
+add address="www.somosesencial.cl" list="Pagina-OK" comment="Pagina-OK"
+# Geo Victoria: www.geovictoria.com
+add address="www.geovictoria.com" list="Pagina-OK" comment="Pagina-OK"
+# Recursos: accounts.claveunica.gob.cl
+add address="accounts.claveunica.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+add address="claveunica.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+# Licitaciones: DTPM: licitaciones.dtpm.cl
+add address="licitaciones.dtpm.cl" list="Pagina-OK" comment="Pagina-OK"
+# PAginas del Router
+# Mutual: mutual.cl
+add address="mutual.cl" list="Pagina-OK" comment="Pagina-OK"
+# Ministerio de Salud: www.minsal.cl
+add address="www.minsal.cl" list="Pagina-OK" comment="Pagina-OK"
+# Seremi de Salud - Agenda Centro Sangre Concepcion: seremi13.redsalud.gob.cl
+add address="seremi13.redsalud.gob.cl" list="Pagina-OK" comment="Pagina-OK"
+# Direccion del Trabajo: midt.dirtrab.cl
+add address="midt.dirtrab.cl" list="Pagina-OK" comment="Pagina-OK"
+# VRWEB - Diseno y Desarrollo Web: www.vrweb.cl
+add address="www.vrweb.cl" list="Pagina-OK" comment="Pagina-OK"
+# VRWEB - Diseno y Desarrollo Web: emma.cl
+add address="emma.cl" list="Pagina-OK" comment="Pagina-OK"
+# Central 132: central132.cl
+add address="central132.cl" list="Pagina-OK" comment="Pagina-OK"
+# Directorio de Transporte Publico: www.dtpm.cl
+add address="www.dtpm.cl" list="Pagina-OK" comment="Pagina-OK"
+# Woken: woken.cl
+add address="woken.cl" list="Pagina-OK" comment="Pagina-OK"
+# Woken: clientes.woken.app
+add address="clientes.woken.app" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: gmail.com
+add address="gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: mail.gmail.com
+add address="mail.gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: www.gmail.com
+add address="www.gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: mail.google.com
+add address="mail.google.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: smtp.gmail.com
+add address="smtp.gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: pop.gmail.com
+add address="pop.gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Mail Google: imap.gmail.com
+add address="imap.gmail.com" list="Pagina-OK" comment="Pagina-OK"
+# Tracktec: suite.tracktec.cl
+add address="suite.tracktec.cl" list="Pagina-OK" comment="Pagina-OK"
+# Tracktec: tracktec-suite.auth0.com
+add address="tracktec-suite.auth0.com" list="Pagina-OK" comment="Pagina-OK"
+# Tracktec: tracktec.cl
+add address="tracktec.cl" list="Pagina-OK" comment="Pagina-OK"
+# Sonda Sinoptico: snptc.tstgo.cl
+add address="snptc.tstgo.cl" list="Pagina-OK" comment="Pagina-OK"
+# Sonda Sinoptico: 198.41.44.127
+add address="198.41.44.127" list="Pagina-OK" comment="Pagina-OK"
+# Sonda Sinoptico: 200.71.222.43
+add address="200.71.222.43" list="Pagina-OK" comment="Pagina-OK"
+# Unidad Operativa de Control de Transito: 200.75.19.170-200.75.19.175
+add address="200.75.19.170-200.75.19.175" list="Pagina-OK" comment="Pagina-OK"
+# Unidad Operativa de Control de Transito: apps.mtt.cl
+add address="apps.mtt.cl" list="Pagina-OK" comment="Pagina-OK"
+# Unidad Operativa de Control de Transito: mtt.gob.cl
+add address="mtt.gob.cl" list="Pagina-OK" comment="Pagina-OK"

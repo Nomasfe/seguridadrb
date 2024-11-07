@@ -1,0 +1,88 @@
+# Remove all old entries first
+:foreach i in=[/ip firewall address-list find ] do={
+  :if ( [/ip firewall address-list get $i comment] = "Paginas-OK") do={
+      /ip firewall address-list remove $i
+  }
+}
+
+# Now let's add the new ones
+/ip firewall address-list
+# Paginas de Bancos de Chile
+add address="banco.bice.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.bci.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.scotiabankchile.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.bancoripley.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="portales.bancochile.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.bancoconsorcio.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.bancofalabella.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.internacional.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="banco.santander.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="personas.bancosecurity.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="empresas.bancosecurity.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.bancoestado.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="ww2.itau.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.btgpactual.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.about.hsbc.cl" list="Paginas-OK" comment="Paginas-OK"
+# Paginas de AFP
+add address="www6.cuprum.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.afphabitat.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.planvital.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.provida.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="www.afpcapital.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="nueva.afpmodelo.cl" list="Paginas-OK" comment="Paginas-OK"
+add address="uno.cl" list="Paginas-OK" comment="Paginas-OK"
+
+www.spensiones.cl
+www.previred.com
+www.afc.cl
+www.registrocivil.cl
+www.ips.gob.cl
+www.df.cl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+add address="licitaciones.dtpm.cl" list="Paginas-OK" comment="Paginas-OK"
+recursos.vule.cl
+apps.mtt.cl
+www.fonasa.cl
+www.somosesencial.cl
+www.vidatres.cl
+www.nuevamasvida.cl
+www.cruzblanca.cl
+www.consalud.cl
+www.colmena.cl
+www.banmedica.cl
+www.geovictoria.com
+www.previred.com
+accounts.claveunica.gob.cl
+zeusr.sii.cl
+homer.sii.cl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
