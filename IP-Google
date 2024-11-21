@@ -130,3 +130,50 @@ add address="130.211.0.0/22" list="IP-Google" comment="IP-Google"
 
 # Gmail
 add address="209.85.128.0/17" list="IP-Google" comment="IP-Google"
+
+# Paginas de Google
+add address="google.com" list="IP-Google" comment="IP-Google"
+add address="google.cl" list="IP-Google" comment="IP-Google"
+add address="google.com.mx" list="IP-Google" comment="IP-Google"
+add address="google.co.uk" list="IP-Google" comment="IP-Google"
+add address="google.fr" list="IP-Google" comment="IP-Google"
+add address="google.de" list="IP-Google" comment="IP-Google"
+add address="google.com.ar" list="IP-Google" comment="IP-Google"
+add address="mail.google.com" list="IP-Google" comment="IP-Google"
+add address="drive.google.com" list="IP-Google" comment="IP-Google"
+add address="docs.google.com" list="IP-Google" comment="IP-Google"
+add address="sheets.google.com" list="IP-Google" comment="IP-Google"
+add address="photos.google.com" list="IP-Google" comment="IP-Google"
+add address="maps.google.com" list="IP-Google" comment="IP-Google"
+add address="calendar.google.com" list="IP-Google" comment="IP-Google"
+add address="translate.google.com" list="IP-Google" comment="IP-Google"
+add address="news.google.com" list="IP-Google" comment="IP-Google"
+add address="play.google.com" list="IP-Google" comment="IP-Google"
+add address="developers.google.com" list="IP-Google" comment="IP-Google"
+add address="console.cloud.google.com" list="IP-Google" comment="IP-Google"
+add address="analytics.google.com" list="IP-Google" comment="IP-Google"
+add address="ads.google.com" list="IP-Google" comment="IP-Google"
+add address="about.google" list="IP-Google" comment="IP-Google"
+add address="blog.google" list="IP-Google" comment="IP-Google"
+add address="safety.google" list="IP-Google" comment="IP-Google"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
