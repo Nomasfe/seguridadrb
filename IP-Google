@@ -132,6 +132,7 @@ add address="130.211.0.0/22" list="IP-Google" comment="IP-Google"
 add address="209.85.128.0/17" list="IP-Google" comment="IP-Google"
 
 # Paginas de Google
+/ip firewall address-list
 add address="google.com" list="IP-Google" comment="IP-Google"
 add address="google.cl" list="IP-Google" comment="IP-Google"
 add address="google.com.mx" list="IP-Google" comment="IP-Google"
@@ -156,24 +157,4 @@ add address="ads.google.com" list="IP-Google" comment="IP-Google"
 add address="about.google" list="IP-Google" comment="IP-Google"
 add address="blog.google" list="IP-Google" comment="IP-Google"
 add address="safety.google" list="IP-Google" comment="IP-Google"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+add address="ci3.googleusercontent.com" list="IP-Google" comment="IP-Google"
